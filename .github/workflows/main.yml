@@ -1,9 +1,9 @@
 name: Unlock-NetEaseMusic
 
-on:
-  schedule:
-    - cron: "37 */8 * * *" # Runs every 8 hours
-  workflow_dispatch:
+# on:
+#   schedule:
+#     - cron: "37 */8 * * *" # Runs every 8 hours
+#   workflow_dispatch:
 
 jobs:
   build:
