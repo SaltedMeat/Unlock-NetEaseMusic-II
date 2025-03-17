@@ -8,8 +8,6 @@ on:
 jobs:
   build:
     runs-on: windows-latest
-    env:
-      MUSIC_U: ${{ secrets.MUSIC_U }}
 
     steps:
       - name: Checkout repository
@@ -46,8 +44,7 @@ jobs:
 
       - name: Run unlock script
         env:
-          EMAIL: ${{ secrets.EMAIL }}
-          PASSWORD: ${{ secrets.PASSWORD }}
+          MUSIC_U: ${{ secrets.MUSIC_U }}
           PYTHONIOENCODING: utf-8
           PYTHONLEGACYWINDOWSSTDIO: utf-8
         run: python auto_login.py
